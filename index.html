@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Firestore Lists</title>
+
+    <link rel="stylesheet" href="CSS/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Firestore Lists</h1>
+    </header>
+    <main>
+        <ul>
+            <li class="heading">Teams
+                <ul class="teams contacts">
+
+                </ul>
+            </li>
+            <li class="heading">Players
+                <ul class="players contacts">
+
+                </ul>
+            </li>
+            <li class="heading">Archetypes
+                <ul class="archetypes contacts">
+
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <div class="fab"></div>
+
+    </footer>
+
+    <div class="overlay not"></div>
+
+    <div class="formContainer not">
+        <form class="contactform">
+            <fieldset>
+                <legend>New List Item</legend>
+                <div>
+                    <label for="fullName">Category:</label>
+                    <select name="candidate" id="candidate">
+						<option selected value="">Please choose a category</option>
+						<optgroup label="Options">
+							<option value="teams">Teams</option>
+							<option value="players">Players</option>
+							<option value="archetypes">Archetypes</option>
+						</optgroup>
+					</select>
+                </div>
+                <div>
+                    <label for="input-name">Name:</label>
+                    <input id="input-name" placeholder="Enter Name" type="text" required autofocus/>
+                </div>
+                <div>
+                    <button id="btnCancel" type="submit">Cancel</button>
+                    <button id="btnSave" type="submit">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="editformContainer not">
+        <form class="contactform">
+            <fieldset>
+                <legend>Edit List Item</legend>
+                <div>
+                    <label for="fullName">Category: </label>
+                    <input id="editCategory" placeholder="Enter Full Name" type="text"  disabled/>
+                </div>
+                <div>
+                    <label for="input-email">Old Name:</label>
+                    <input id="editinput-oldname" placeholder="" type="text" disabled/>
+                </div>
+                <div>
+                    <label for="input-name">New Name:</label>
+                    <input id="editinput-name" placeholder="Enter Name" type="text" autofocus/>
+                </div>
+                <div>
+                    <button id="editbtnCancel" type="submit">Cancel</button>
+                    <button id="btnEdit" type="submit">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+    <template id="myTemplate" class="testClass">
+           <li class="contact">
+                <span class="delete"></span>
+                <h3>Luke Skywalker</h3>
+                <p class="material-icons edit">border_color</p>
+            </li>
+    </template>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBQZxJyZKXUui621-7ibU_SVNwm2EbJ2E0",
+            authDomain: "shawnboxiaoliufirebase.firebaseapp.com",
+            databaseURL: "https://shawnboxiaoliufirebase.firebaseio.com",
+            projectId: "shawnboxiaoliufirebase",
+            storageBucket: "shawnboxiaoliufirebase.appspot.com",
+            messagingSenderId: "971747521199"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="JS/main.js"></script>
+    <script src="JS/starter.js"></script>
+</body>
+  
+</html>
+
+
+
